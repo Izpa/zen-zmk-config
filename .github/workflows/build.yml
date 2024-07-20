@@ -1,15 +1,11 @@
 name: Build ZMK firmware
 
-on:
+on: 
   push:
     paths-ignore:
       - 'images/**'
-      - 'keymap-drawer.config.yaml'
-      - 'keymap/**'
-      - '.vscode/**'
-      - 'README.md'
-      - '.gitattributes'
+      - 'keymap-drawer/**'
 
 jobs:
   build:
-    uses: urob/zmk/.github/workflows/build-user-config.yml@build-with-submodules
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
